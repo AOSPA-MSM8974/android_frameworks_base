@@ -152,4 +152,8 @@
     <!-- Default value for Horizon light color (Blue) -->
     <integer name="config_AmbientPulseLightColor">0x3980FF</integer>
 
+    <!-- Button backlight -->
+    <integer name="config_buttonBrightnessSettingDefault">255</integer>
+    <bool name="config_deviceHasVariableButtonBrightness">false</bool>
+
 </resources>
