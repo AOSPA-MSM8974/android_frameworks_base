@@ -116,4 +116,9 @@ interface IStatusBarService
     // Used to show or hide in display fingerprint view
     void showInDisplayFingerprintView();
     void hideInDisplayFingerprintView();
+
+    /**
+     * Camera flash toggle
+     */
+    void toggleCameraFlash();
 }
