@@ -30,6 +30,6 @@
     <bool name="config_customCutout">false</bool>
 
     <string name="quick_settings_tiles_extra" translatable="false">
-        caffeine
+        caffeine,reboot
     </string>
 </resources>
