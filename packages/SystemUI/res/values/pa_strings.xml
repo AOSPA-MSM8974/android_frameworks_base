@@ -34,6 +34,11 @@
     <string name="extended_restart_name">Extended Restart</string>
     <string name="extended_restart_summary">Restart the device to different modes such as bootloader and recovery</string>
 
+    <!-- Caffeine tile -->
+    <string name="quick_settings_caffeine_label">Caffeine</string>
+    <string name="accessibility_quick_settings_caffeine_off">Caffeine off</string>
+    <string name="accessibility_quick_settings_caffeine_on">Caffeine on</string>
+
     <!-- Screen pinning dialog description. (for devices without navbar) -->
     <string name="screen_pinning_description_no_navbar">This keeps it in view until you unpin. Touch &amp; hold Back to unpin.</string>
      <!-- Notify use that they are in Lock-to-app (for devices without navbar)-->
