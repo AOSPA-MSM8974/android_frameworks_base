@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="utf-8"?>
 <!--
     Copyright 2014-2019 Paranoid Android
@@ -145,5 +146,8 @@
     <java-symbol type="integer" name="config_longPressOnAppSwitchBehaviorHwkeys" />
     <java-symbol type="integer" name="config_pressOnAssistBehaviorHwkeys" />
     <java-symbol type="integer" name="config_longPressOnAssistBehaviorHwkeys" />
+
+    <!-- Camera key type -->
+    <java-symbol type="bool" name="config_singleStageCameraKey" />
 
 </resources>

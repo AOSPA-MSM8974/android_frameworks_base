@@ -303,4 +303,8 @@
     -->
     <integer name="config_longPressOnAssistBehaviorHwkeys">4</integer>
 
- </resources>
+  <!-- Indicates that the device has Single-stage Camera key
+         (without "Focus" state) instead of Dual-stage. -->
+    <bool name="config_singleStageCameraKey">false</bool>
+
+</resources>
