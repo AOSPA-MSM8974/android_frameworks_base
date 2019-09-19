@@ -4729,6 +4729,23 @@ public final class Settings {
         public static final String ALERT_SLIDER_ORDER = "alert_slider_order";
 
         /**
+         * Number of qs rows on landscape orientation
+         * @hide
+         */
+        public static final String QS_LAYOUT_ROWS_LANDSCAPE = "qs_layout_rows_landscape";
+         /** @hide */
+        private static final Validator QS_LAYOUT_ROWS_LANDSCAPE_VALIDATOR =
+                ANY_INTEGER_VALIDATOR;
+
+         /**
+         * @hide
+         */
+        public static final String QS_LAYOUT_ROWS = "qs_layout_rows";
+         /** @hide */
+        private static final Validator QS_LAYOUT_ROWS_VALIDATOR =
+                ANY_INTEGER_VALIDATOR;
+
+        /**
          * Controls whether gestures are enabled.
          * @hide
          */
@@ -4925,6 +4942,31 @@ public final class Settings {
         private static final Validator NAVIGATION_HANDLE_WIDTH_VALIDATOR = ANY_INTEGER_VALIDATOR;
 
         /**
+         * Number of qs columns on landscape orientation
+         * @hide
+         */
+        public static final String QS_LAYOUT_COLUMNS_LANDSCAPE = "qs_layout_columns_landscape";
+         /** @hide */
+        private static final Validator QS_LAYOUT_COLUMNS_LANDSCAPE_VALIDATOR =
+                ANY_INTEGER_VALIDATOR;
+
+        /**
+         * @hide
+         */
+        public static final String QS_LAYOUT_COLUMNS = "qs_layout_columns";
+         /** @hide */
+        private static final Validator QS_LAYOUT_COLUMNS_VALIDATOR =
+                ANY_INTEGER_VALIDATOR;
+
+        /**
+         * @hide
+         */
+        public static final String QS_QUICKBAR_COLUMNS = "qs_quickbar_columns";
+        /** @hide */
+        private static final Validator QS_QUICKBAR_COLUMNS_VALIDATOR =
+                ANY_INTEGER_VALIDATOR;
+
+        /**
          * Settings to backup. This is here so that it's in the same place as the settings
          * keys and easy to update.
          *
@@ -4992,6 +5034,11 @@ public final class Settings {
             AMBIENT_NOTIFICATION_LIGHT_AUTOMATIC,
             NOTIFICATION_LIGHT_PULSE,
             NAVIGATION_HANDLE_WIDTH,
+            QS_LAYOUT_COLUMNS_LANDSCAPE,
+            QS_LAYOUT_COLUMNS,
+            QS_QUICKBAR_COLUMNS,
+            QS_LAYOUT_ROWS_LANDSCAPE,
+            QS_LAYOUT_ROWS,
         };
 
         /**
@@ -5155,6 +5202,11 @@ public final class Settings {
             PRIVATE_SETTINGS.add(NETWORK_TRAFFIC_STATE);
             PRIVATE_SETTINGS.add(NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD);
 	        PRIVATE_SETTINGS.add(NETWORK_TRAFFIC_ARROW);
+            PRIVATE_SETTINGS.add(QS_LAYOUT_COLUMNS_LANDSCAPE);
+            PRIVATE_SETTINGS.add(QS_LAYOUT_COLUMNS);
+            PRIVATE_SETTINGS.add(QS_QUICKBAR_COLUMNS);
+            PRIVATE_SETTINGS.add(QS_LAYOUT_ROWS_LANDSCAPE);
+            PRIVATE_SETTINGS.add(QS_LAYOUT_ROWS);
         }
 
         /**
@@ -5275,6 +5327,13 @@ public final class Settings {
             VALIDATORS.put(CAMERA_SLEEP_ON_RELEASE, CAMERA_SLEEP_ON_RELEASE_VALIDATOR);
             VALIDATORS.put(CAMERA_LAUNCH, CAMERA_LAUNCH_VALIDATOR);
             VALIDATORS.put(NAVIGATION_BAR_MODE_OVERLAY, NAVIGATION_BAR_MODE_OVERLAY_VALIDATOR);
+            VALIDATORS.put(QS_LAYOUT_COLUMNS_LANDSCAPE,
+                    QS_LAYOUT_COLUMNS_LANDSCAPE_VALIDATOR);
+            VALIDATORS.put(QS_LAYOUT_COLUMNS, QS_LAYOUT_COLUMNS_VALIDATOR);
+            VALIDATORS.put(QS_QUICKBAR_COLUMNS, QS_QUICKBAR_COLUMNS_VALIDATOR);
+            VALIDATORS.put(QS_LAYOUT_ROWS_LANDSCAPE,
+                    QS_LAYOUT_ROWS_LANDSCAPE_VALIDATOR);
+            VALIDATORS.put(QS_LAYOUT_ROWS, QS_LAYOUT_ROWS_VALIDATOR);
         }
 
         /**
