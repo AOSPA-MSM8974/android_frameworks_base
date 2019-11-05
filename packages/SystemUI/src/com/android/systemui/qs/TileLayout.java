@@ -33,7 +33,6 @@ public class TileLayout extends ViewGroup implements QSTileLayout {
     protected final ArrayList<TileRecord> mRecords = new ArrayList<>();
     private int mCellMarginTop;
     private boolean mListening;
-    //protected int mMaxAllowedRows = 3;
 
     public TileLayout(Context context) {
         this(context, null);
@@ -90,8 +89,8 @@ public class TileLayout extends ViewGroup implements QSTileLayout {
         mCellMarginHorizontal = res.getDimensionPixelSize(R.dimen.qs_tile_margin_horizontal);
         mCellMarginVertical= res.getDimensionPixelSize(R.dimen.qs_tile_margin_vertical);
         mCellMarginTop = res.getDimensionPixelSize(R.dimen.qs_tile_margin_top);
-        mSidePadding = res.getDimensionPixelOffset(R.dimen.qs_tile_layout_margin_side);
-        //mMaxAllowedRows = Math.max(1, getResources().getInteger(R.integer.quick_settings_max_rows));
+        // is already applied in the layout xml
+        mSidePadding = 0; //res.getDimensionPixelOffset(R.dimen.qs_tile_layout_margin_side);
         updateSettings();
         return false;
     }
