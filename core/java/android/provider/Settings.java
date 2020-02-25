@@ -4793,8 +4793,8 @@ public final class Settings {
          */
         public static final String GESTURE_DRAW_S = "gesture_draw_s";
 
-	/**
-	 * Wheter to show network traffic indicator in statusbar
+	    /**
+	    * Wheter to show network traffic indicator in statusbar
          * @hide
          */
         public static final String NETWORK_TRAFFIC_STATE = "network_traffic_state";
@@ -4805,11 +4805,11 @@ public final class Settings {
          */
         public static final String NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD = "network_traffic_autohide_threshold";
 
-	/**
-         * Whether to disable showing arrows in statusbar network traffic indicators
+	    /**
+         * Whether to show speed dynamically in satusbar network traffic indicators
          * @hide
          */
-        public static final String NETWORK_TRAFFIC_ARROW = "network_traffic_arrow";
+        public static final String NETWORK_TRAFFIC_DYNAMIC = "network_traffic_dynamic";
 
         /**
          * Controls whether draw arrow left gesture is enabled.
@@ -5201,7 +5201,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(NAVIGATION_BAR_MODE_OVERLAY);
             PRIVATE_SETTINGS.add(NETWORK_TRAFFIC_STATE);
             PRIVATE_SETTINGS.add(NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD);
-	        PRIVATE_SETTINGS.add(NETWORK_TRAFFIC_ARROW);
+            PRIVATE_SETTINGS.add(NETWORK_TRAFFIC_DYNAMIC);
             PRIVATE_SETTINGS.add(QS_LAYOUT_COLUMNS_LANDSCAPE);
             PRIVATE_SETTINGS.add(QS_LAYOUT_COLUMNS);
             PRIVATE_SETTINGS.add(QS_QUICKBAR_COLUMNS);
