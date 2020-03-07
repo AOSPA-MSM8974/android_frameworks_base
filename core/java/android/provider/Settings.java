@@ -4875,12 +4875,22 @@ public final class Settings {
                 BOOLEAN_VALIDATOR;
 
         /**
+         * Force show navigation bar setting.
+         * @hide
+         */
+        public static final String NAVIGATION_BAR_MODE_OVERLAY = "navigation_bar_mode_overlay";
+
+         /** @hide */
+        public static final Validator NAVIGATION_BAR_MODE_OVERLAY_VALIDATOR =
+                ANY_STRING_VALIDATOR;
+
+        /**
          * Whether allowing pocket service to register sensors and dispatch informations.
          *   0 = disabled
          *   1 = enabled
          * @author Carlo Savignano
          * @hide
-         */
+        */
         public static final String POCKET_JUDGE = "pocket_judge";
 
         /** @hide */
@@ -5121,6 +5131,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(CAMERA_WAKE_SCREEN);
             PRIVATE_SETTINGS.add(CAMERA_SLEEP_ON_RELEASE);
             PRIVATE_SETTINGS.add(CAMERA_LAUNCH);
+            PRIVATE_SETTINGS.add(NAVIGATION_BAR_MODE_OVERLAY);
         }
 
         /**
@@ -5240,6 +5251,7 @@ public final class Settings {
             VALIDATORS.put(CAMERA_WAKE_SCREEN, CAMERA_WAKE_SCREEN_VALIDATOR);
             VALIDATORS.put(CAMERA_SLEEP_ON_RELEASE, CAMERA_SLEEP_ON_RELEASE_VALIDATOR);
             VALIDATORS.put(CAMERA_LAUNCH, CAMERA_LAUNCH_VALIDATOR);
+            VALIDATORS.put(NAVIGATION_BAR_MODE_OVERLAY, NAVIGATION_BAR_MODE_OVERLAY_VALIDATOR);
         }
 
         /**
