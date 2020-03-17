@@ -58,7 +58,7 @@ public class NavbarUtils {
     }
 
     public static boolean hasNavbarByDefault(Context context) {
-        return true;
+        return false;
     }
     public static boolean isEnabled(Context context) {
         return Settings.System.getIntForUser(context.getContentResolver(),
