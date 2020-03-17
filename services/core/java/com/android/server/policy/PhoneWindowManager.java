@@ -825,10 +825,6 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                     mWindowManagerFuncs.moveDisplayToTop(msg.arg1);
                     mMovingDisplayToTopKeyTriggered = false;
                     break;
-                case MSG_CAMERA_LONG_PRESS:
-                    KeyEvent event = (KeyEvent) msg.obj;
-                    mIsLongPress = true;
-                    break;
                 case MSG_DISPATCH_VOLKEY_WITH_WAKE_LOCK: {
                     KeyEvent event = (KeyEvent) msg.obj;
                     mVolBtnLongPress = true;
@@ -837,6 +833,11 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                             KeyEvent.changeAction(event, KeyEvent.ACTION_UP));
                     break;
                 }
+                case MSG_CAMERA_LONG_PRESS: {
+                    KeyEvent event = (KeyEvent) msg.obj;
+                    mIsLongPress = true;
+                    break;
+		}
             }
         }
     }
@@ -919,6 +920,7 @@ public class PhoneWindowManager implements WindowManagerPolicy {
             resolver.registerContentObserver(Settings.System.getUriFor(
                     Settings.System.VOLBTN_MUSIC_CONTROLS), false, this,
                     UserHandle.USER_ALL);
+            resolver.registerContentObserver(Settings.System.getUriFor(
                     Settings.System.KEY_HOME_LONG_PRESS_ACTION), false, this,
                     UserHandle.USER_ALL);
             resolver.registerContentObserver(Settings.System.getUriFor(
