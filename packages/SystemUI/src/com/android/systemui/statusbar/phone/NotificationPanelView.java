@@ -109,6 +109,7 @@ import com.android.systemui.statusbar.policy.KeyguardMonitor;
 import com.android.systemui.statusbar.policy.KeyguardUserSwitcher;
 import com.android.systemui.statusbar.policy.OnHeadsUpChangedListener;
 import com.android.systemui.statusbar.policy.ZenModeController;
+import com.android.systemui.tuner.TunerService;
 import com.android.systemui.util.InjectionInflationController;
 
 import com.android.systemui.aospa.NotificationLightsView;
@@ -130,7 +131,7 @@ public class NotificationPanelView extends PanelView implements
         OnHeadsUpChangedListener, QS.HeightListener, ZenModeController.Callback,
         ConfigurationController.ConfigurationListener, StateListener,
         PulseExpansionHandler.ExpansionCallback, DynamicPrivacyController.Listener,
-        NotificationWakeUpCoordinator.WakeUpListener {
+        NotificationWakeUpCoordinator.WakeUpListener, TunerService.Tunable {
 
     private static final boolean DEBUG = false;
     private static final boolean DEBUG_PULSE_LIGHT = false;
@@ -167,7 +168,7 @@ public class NotificationPanelView extends PanelView implements
     static final String COUNTER_PANEL_OPEN_QS = "panel_open_qs";
     private static final String COUNTER_PANEL_OPEN_PEEK = "panel_open_peek";
 
-    private static final String DOUBLE_TAP_SLEEP_GESTURE =
+    public static final String DOUBLE_TAP_SLEEP_GESTURE =
             "system:" + Settings.System.DOUBLE_TAP_SLEEP_GESTURE;
 
     private static final Rect mDummyDirtyRect = new Rect(0, 0, 1, 1);
@@ -589,6 +590,7 @@ public class NotificationPanelView extends PanelView implements
         Dependency.get(StatusBarStateController.class).removeCallback(this);
         Dependency.get(ZenModeController.class).removeCallback(this);
         Dependency.get(ConfigurationController.class).removeCallback(this);
+	Dependency.get(TunerService.class).removeTunable(this);
         mUpdateMonitor.removeCallback(mKeyguardUpdateCallback);
     }
 
